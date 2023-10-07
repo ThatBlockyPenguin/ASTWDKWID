@@ -13,11 +13,15 @@ public final class GUI extends JFrame {
     private static final Logger LOGGER = LogManager.getLogger();
     public static GUI instance = null;
 
+    static {
+        LOGGER.debug("Loaded.");
+    }
+
     public GUI() {
         super(Metadata.DEFAULT.postfixShortName("Settings"));
 
         setupClosingHandler();
-        this.setSize(300, 300);
+        this.setSize(800, 600);
         setupContent();
     }
 
