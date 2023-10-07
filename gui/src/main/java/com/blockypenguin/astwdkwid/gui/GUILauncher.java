@@ -9,8 +9,9 @@ final class GUILauncher {
     private static final Logger LOGGER = LogManager.getLogger();
 
     public static void main(String[] args) {
-        Server.run(Metadata.DEFAULT.port());
-        LOGGER.debug("Launching GUI...");
+        LOGGER.info("Launching GUI...");
         GUI.getInstance().display();
+
+        Server.run(Metadata.DEFAULT.port());
     }
 }
